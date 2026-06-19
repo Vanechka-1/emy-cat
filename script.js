@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     catImg.addEventListener('click', () => {
         if (catState === 'calm') {
             catState = 'angry';
-            catImg.src = 'Cat_Photos/Angry_Cat.jpg';
+            catImg.src = 'Cat_Photos/Angry_Cat.png';
             caption.textContent = 'Что ты наделала? Теперь надо быстро ее погладить';
         }
     });
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     catImg.addEventListener('mousemove', () => {
         if (catState === 'angry') {
             catState = 'relaxed';
-            catImg.src = 'Cat_Photos/Relaxed_Cat.jpg';
+            catImg.src = 'Cat_Photos/Relaxed_Cat.png';
             caption.textContent = 'Ммм, вот так хорошо... 🥰';
 
             // Очищаємо попередній таймер, якщо він раптом був
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // 3. Через 3 секунди повертаємо все назад до звичайного фото
             resetTimeout = setTimeout(() => {
                 catState = 'calm';
-                catImg.src = 'Cat_Photos/Cat.jpg';
+                catImg.src = 'Cat_Photos/Cat.png';
                 caption.textContent = 'Нажми на нее!';
             }, 3000); // 3000 мілісекунд = 3 секунди
         }
