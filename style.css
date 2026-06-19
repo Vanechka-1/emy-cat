@@ -1,0 +1,74 @@
+/* Базові налаштування: сучасний мінімалізм */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff0f3; /* Ніжний пастельно-рожевий фон */
+    padding: 20px;
+}
+
+/* Картка сайту: мікс дівчачого рожевого та мінімалізму */
+.card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(255, 182, 193, 0.4); /* М'яка рожева тінь */
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.title {
+    font-size: 2rem;
+    color: #ff758f; /* Елегантний рожевий акцент */
+    margin-bottom: 25px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+/* Контейнер під фото кота */
+.image-container {
+    background: #000000; /* Чорний колір, щоб приховати межі фото */
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 1 / 1; /* Робимо його квадратним */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Картинка масштабується без спотворень */
+    transition: transform 0.2s ease;
+}
+
+/* Ефект легкого збільшення при наведенні */
+.image-container:hover img {
+    transform: scale(1.02);
+}
+
+/* Підпис під фото */
+.caption {
+    font-size: 1.1rem;
+    color: #594d50; /* Приглушений темний колір для мінімалізму */
+    margin-top: 25px;
+    min-height: 50px; /* Фіксована висота, щоб текст не совав картку */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    padding: 0 10px;
+}
